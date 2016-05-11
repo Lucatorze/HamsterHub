@@ -1,0 +1,582 @@
+@charset "UTF-8";
+
+$primary-color: #f08d38;
+$secondary-color: #51332b;
+$tertiary-color: #1d1c1a;
+$background-popup: rgba(0, 0, 0, 0.7);
+$background-comments: #d0d0d0;
+$title-popup: #333;
+$white: #FFF;
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../font/SourceSansPro-Light.otf') format('truetype');
+}
+$font-stack: 'Source Sans Pro';
+
+//////////////////////////    Header    ////////////////////////////////
+
+body {
+  font-family: $font-stack;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+.header > * {
+  line-height: 80px;
+}
+
+.headerHome {
+  display: none;
+}
+
+.headerImg {
+  width: 50%;
+  margin-top: 8px;
+}
+
+.headerMenuImg {
+  width: 5%;
+  float: left;
+  margin: 40px 0 0 40px;
+}
+
+.headerHome .headerLink {
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+.headerSignUp {
+  display: none;
+}
+
+.headerSignIn {
+  display: none;
+}
+
+.headerHr {
+  width: 80%;
+  height: 3px;
+  margin: 25px auto 0 auto;
+  border: none;
+  background: linear-gradient(to right, $secondary-color, $primary-color); /* Standard syntax */
+}
+
+//////////////////////////    Video HomePage   ////////////////////////////////
+
+.videoContent {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.videoContent li{
+  list-style-type: none;
+}
+
+.video {
+  display: inline-block;
+  margin: 25px 10% 0 10%;
+  width: 65%;
+  height: 150px;
+  background: $primary-color;
+}
+
+.video:last-child {
+  margin-bottom: 25px;
+}
+
+//////////////////////////    Video Watching only one    ////////////////////////////////
+
+.videoIframe{
+  display: inline-block;
+  margin: 80px 0 0 -2%;
+  height: 315px;
+}
+
+.videoIframe iframe{
+  width: 240px;
+  height: 240px;
+}
+
+.videoWTitle {
+  font-size: 1.3rem;
+}
+
+.videoWAuthor, .videoWDescription, .videoWComments {
+  text-align: left;
+}
+
+.videoWAuthor {
+  margin: 15px 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.videoWDescription {
+  margin: 15px 0 15px 0;
+  font-size: 0.9rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $tertiary-color;
+}
+
+.videoWComments {
+  margin: 25px 0 0 0;
+  font-size: 0.9rem;
+}
+
+.videoWComments1 {
+  padding: 5px;
+  margin: 5px;
+  background: $background-comments;
+}
+
+//////////////////////////    Video creation    ////////////////////////////////
+
+.videoCreationTitle {
+  font-size: 1.5rem;
+  margin: 75px 0 50px 0;
+}
+
+.videoCreation {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+form[name="videoCreationForm"] > * {
+  margin: 15px 0 15px 0;
+}
+
+//////////////////////////    Profil    ////////////////////////////////
+
+.profil {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.profilTitle{
+  font-size: 2rem;
+  text-align: center;
+  margin: 75px 0 50px 0;
+}
+
+.profilPicture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid $primary-color;
+  margin: 60px auto 25px auto;
+  background-size: 101%;
+}
+
+.profilName, .profilEmail, .profilBirth{
+  font-size: 1.3rem;
+  margin: 20px 0 20px 0;
+}
+
+//////////////////////////    Footer    ////////////////////////////////
+
+.footer {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  height: 150px;
+}
+
+.footerContact {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  display: inline-block;
+  width: 30%;
+}
+
+.footerTitle {
+  font-size: 1rem;
+}
+
+.footerSeparation {
+  margin: 5px 0 10px 0;
+}
+
+.footerCopyright{
+  margin-top: 25px;
+}
+
+//////////////////////////    Pop up    ////////////////////////////////
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $background-popup;
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup {
+  margin: 70px auto 0 auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  min-height: 50%;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: $tertiary-color;
+}
+
+.popup .close {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $title-popup;
+}
+
+.popup .close:hover {
+  color: $primary-color;
+}
+
+.signInForm {
+  display: block;
+}
+
+.signInInput {
+  margin-top: -25px;
+}
+
+.signInSubmit {
+  margin-top: -15px;
+}
+
+.inputSignUp {
+  border: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $secondary-color;
+  outline: none;
+  color: $secondary-color;
+}
+
+.submitSignUp {
+  width: 100px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background: $primary-color;
+  color: $white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+//////////////////////////    Hamburger Menu    ////////////////////////////////
+
+.c-menu {
+  height: 100%;
+  position: fixed;
+  z-index: 200;
+  background-color: $secondary-color;
+  transition: transform 0.3s;
+  display: none;
+  box-shadow: 4px 0 15px $tertiary-color;
+}
+
+.titleMenu {
+  text-align: center;
+  font-size: 1.2rem;
+  color: $white;
+}
+
+.crossToggle {
+  font-size: 40px;
+  margin: 10px 0 0 20px;
+  color: $white;
+}
+
+.c-menu__items {
+  list-style: none;
+  padding: 0;
+}
+
+.c-menu--slide-left {
+  width: 70%;
+}
+
+.c-menu--slide-left .c-menu__item {
+  font-size: 1rem;
+  height: 45px;
+  width: 85%;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-bottom: solid 1px $white;
+}
+
+.c-menu--slide-left .c-menu__item:first-child {
+  border-top: none;
+}
+
+.c-menu--slide-left .c-menu__item:nth-child(2) {
+  margin-top: 20px;
+}
+
+.c-menu--slide-left .c-menu__item:last-child {
+  border-bottom: none;
+}
+
+.c-menu--slide-left .c-menu__link {
+  display: block;
+  padding: 10px 10px;
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.c-menu--slide-left .c-menu__close {
+  display: block;
+  padding: 10px 10px;
+  width: 100%;
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+///////////////////////////////
+
+@media (min-width: 641px) {
+
+  .headerMenuImg {
+    display: none;
+  }
+
+  .header {
+    height: 120px;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .header > * {
+    line-height: 120px;
+  }
+
+  .headerHome {
+    display: inline-block;
+    float: left;
+    margin-left: 15%;
+    color: $secondary-color;
+  }
+
+  .headerImg {
+    width: 33%;
+    margin: 0 15px 0 15px;
+  }
+
+  .headerSignUp {
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+    color: $primary-color
+  }
+
+  .headerSignIn {
+    display: inline-block;
+    float: right;
+    margin-right: 10%;
+    color: $primary-color
+  }
+
+  .headerSignIn .headerLink, .headerSignUp .headerLink {
+    text-decoration: none;
+    color: $primary-color
+  }
+
+  .video {
+    width: 45%;
+    height: 225px;
+  }
+
+  .videoIframe iframe{
+    width: 560px;
+    height: 340px;
+  }
+
+  // LES FORM LES FORM LES FORM LES FORM
+
+  .signInInput {
+    margin-top: -45px;
+  }
+
+  .signInSubmit {
+    margin-top: -25px;
+  }
+
+  .inputSignUp {
+    width: 45%;
+    font-size: 1.2rem;
+  }
+
+  .submitSignUp {
+    width: 100px;
+  }
+
+  .videoCreationTitle {
+    font-size: 1.8rem;
+  }
+
+  .videoCreation {
+    width: 70%;
+  }
+
+  .profilTitle{
+    font-size: 2.5rem;
+    margin: 75px 0 50px 0;
+  }
+
+  .profilPicture {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profilName, .profilEmail, .profilBirth{
+    font-size: 1.4rem;
+  }
+}
+
+///////////////////
+
+@media (min-width: 1025px) {
+
+  .header {
+    height: 210px;
+    font-size: 1.5rem;
+  }
+
+  .header > * {
+    line-height: 210px;
+  }
+
+  .video {
+    width: 35%;
+    height: 225px;
+  }
+
+  ///////
+
+  .popup {
+    width: 55%;
+    min-height: 10%;
+  }
+
+  .popup h2 {
+    height: 100px;
+  }
+
+  .signInInput {
+    margin-top: -150px;
+  }
+
+  .signInSubmit {
+    margin-top: -125px;
+  }
+
+  .inputSignUp {
+    width: 30%;
+    font-size: 1rem;
+  }
+
+  .submitSignUp {
+    width: 100px;
+  }
+
+  form[name="videoCreationForm"] .submitSignUp {
+    margin-top: 50px;
+  }
+
+  .videoCreationTitle {
+    font-size: 2rem;
+  }
+
+  .videoCreation {
+    width: 60%;
+  }
+
+  .profilBirth{
+    margin-bottom: 100px;
+  }
+
+}
+
+////////////////////////:
+
+@media (min-width: 1441px) {
+  .header {
+    height: 300px;
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+  }
+
+  .header > * {
+    line-height: 300px;
+  }
+
+  .video {
+    width: 35%;
+    height: 400px;
+  }
+
+  .video:last-child {
+    margin-bottom: 75px;
+  }
+
+  ////////////////::
+  .popup {
+    width: 55%;
+    min-height: 10%;
+  }
+
+  .popup h2 {
+    height: 100px;
+  }
+
+  .signInInput {
+    margin-top: -250px;
+  }
+
+  .signInSubmit {
+    margin-top: -225px;
+  }
+
+  .inputSignUp {
+    width: 30%;
+    font-size: 1rem;
+  }
+
+  .submitSignUp {
+    width: 100px;
+  }
+
+  .videoCreationTitle {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .videoCreation {
+    width: 60%;
+  }
+
+}

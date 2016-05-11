@@ -1,0 +1,55 @@
+<nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+    <ul class="c-menu__items">
+        <li>
+            <a href="#" class="c-menu__link">
+                <div class="onClick crossToggle">&times;</div>
+            </a>
+            <div class="titleMenu">HamsterHub</div>
+        </li>
+        <li class="c-menu__item"><a href="/" class="c-menu__link">Accueil</a></li>
+        <li class="c-menu__item"><a href="#" class="c-menu__link menuSignUp">Inscription</a></li>
+        <li class="c-menu__item"><a href="#" class="c-menu__link menuSignIn">Connexion</a></li>
+    </ul>
+</nav>
+
+<header class="header">
+    <div class="headerMenu">
+        <a href="#">
+            <img class="headerMenuImg onClick" src="/img/menu.png" alt="">
+        </a>
+    </div>
+    <div class="headerHome">
+        <a class="headerLink" href="/">Accueil</a>
+    </div>
+    <img src="/img/logoHamsterhub-01.png" class="headerImg" alt="logo">
+    <div class="headerSignIn">
+        <a class="headerLink" href="#">Connexion</a>
+    </div>
+    <div id="popup2" class="overlay">
+        <div class="popup">
+            <h2>Connexion</h2>
+            <a class="close" href="#">&times;</a>
+            <form name="my-form">
+                <div class="signInForm"><input type="email" name="email" placeholder="Email" class="inputSignUp" required></div>
+                <div class="signInInput signInForm"><input type="password" name="password" placeholder="Mot de passe" class="inputSignUp" required></div>
+                <div class="signInSubmit signInForm"><input type="submit" value="Envoyer" class="submitSignUp"></div>
+            </form>
+        </div>
+    </div>
+    <div class="headerSignUp"><a class="headerLink" href="#popup1">Inscription</a></div>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Inscription</h2>
+            <a class="close" href="#">&times;</a>
+            <form name="my-form">
+                <div class="signInForm"><input type="email" name="email" placeholder="Email" class="inputSignUp" required></div>
+                <div class="signInInput"><input type="text" name="firstname" placeholder="Prénom" class="inputSignUp" required></div>
+                <div class="signInInput"><input type="text" name="lastname" placeholder="Nom" class="inputSignUp" required></div>
+                <div class="signInInput"><input type="password" name="password" placeholder="Mot de passe" class="inputSignUp" required></div>
+                <div class="signInInput"><input type="password" name="verifPassword" placeholder="Vérification Mot de passe" class="inputSignUp" required></div>
+                <div class="signInSubmit"><input type="submit" value="Envoyer" class="submitSignUp"></div>
+            </form>
+        </div>
+    </div>
+    <hr class="headerHr">
+</header>

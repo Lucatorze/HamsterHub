@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+    <div class="videoCreation">
+        <div class="videoCreationTitle">Nouveau commentaire</div>
+
+        <div>
+            {{ form_start(commentsForm) }}
+            {{ form_errors(commentsForm) }}
+
+            <div>
+                {{ form_errors(commentsForm.author) }}
+                {{ form_widget(commentsForm.author, { 'attr': {'class': "inputSignUp",'placeholder': "Auteur"} }) }}
+            </div><br>
+            <br>
+            <div>
+                {{ form_errors(commentsForm.content) }}
+                {{ form_widget(commentsForm.content, { 'attr': {'class': "inputSignUp",'placeholder': "Votre commentaire ..."} }) }}
+            </div><br>
+            <br>
+            <div>
+                {{ form_errors(commentsForm.videoId) }}
+                {{ form_widget(commentsForm.videoId) }}
+            </div><br>
+            <br>
+            <div>
+                {{ form_widget(commentsForm.envoyer, { 'attr': {'class': "submitSignUp",'value': "Envoyer"} }) }}
+            </div>
+
+            {{ form_end(commentsForm) }}
+        </div>
+    </div>
+
+{% endblock %}

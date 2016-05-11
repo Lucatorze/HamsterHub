@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+    <div class="profilTitle">Profil de {{ userInfo.nickname }}</div>
+    <div class="profil">
+        <div class="profilPicture" style=" background: url('/img/color.jpg') no-repeat center;"></div>
+        <div class="profilName">{{ userInfo.nickname }}</div>
+        <div class="profilEmail">{{ userInfo.email }}</div>
+        <div class="profilBirth">{{ userInfo.date|date('d/m/Y')  }}</div>
+    </div>
+
+{% endblock %}

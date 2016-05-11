@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    {{ include('head.html.twig') }}
+
+    <body>
+        <main role="main">
+        {% block body %}
+
+            {{ include('header.html.twig') }}
+
+            {% block content %}{% endblock %}
+
+            {{ include('footer.html.twig') }}
+
+        {% endblock %}
+        </main>
+    </body>
+</html>

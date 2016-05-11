@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+    <div class="profilTitle">Liste des membres</div>
+    <div class="videoContent">
+
+        <ul>
+            {% for user in userList %}
+                <li><a href="{{ path('user_profile', {'slug': user.id }) }}">{{ user.nickname }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+
+{% endblock %}

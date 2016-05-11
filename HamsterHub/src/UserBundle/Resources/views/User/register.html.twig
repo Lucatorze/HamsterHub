@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+    <div class="profil">
+        <div class="profilTitle">Inscription</div>
+        {{ form_start(registerForm) }}
+        {{ form_errors(registerForm) }}
+
+        <div>
+            {{ form_errors(registerForm.nickname) }}
+            {{ form_widget(registerForm.nickname, { 'attr': {'class': "inputSignUp",'placeholder': "Pseudo"} }) }}
+        </div><br>
+        <br>
+        <div>
+            {{ form_errors(registerForm.password) }}
+            {{ form_widget(registerForm.password, { 'attr': {'class': "inputSignUp",'placeholder': "Mot de passe"} }) }}
+        </div><br>
+        <br>
+        <div>
+            {{ form_errors(registerForm.email) }}
+            {{ form_widget(registerForm.email, { 'attr': {'class': "inputSignUp",'placeholder': "E-Mail"} }) }}
+        </div><br>
+        <br>
+        <div align="center">
+            {{ form_label(registerForm.date)}}
+            {{ form_errors(registerForm.date) }}
+            {{ form_widget(registerForm.date, { 'attr': {'class': "inputSignUp"} }) }}
+        </div><br>
+        <br>
+        <div>
+            {{ form_label(registerForm.avatar)}}
+            {{ form_errors(registerForm.avatar) }}
+            {{ form_widget(registerForm.avatar)}}
+        </div><br>
+        <br>
+        <div>
+            {{ form_widget(registerForm.register, { 'attr': {'class': "submitSignUp",'value': "S\'inscrire"} }) }}
+        </div>
+
+        {{ form_end(registerForm) }}
+    </div>
+
+
+
+
+{% endblock %}

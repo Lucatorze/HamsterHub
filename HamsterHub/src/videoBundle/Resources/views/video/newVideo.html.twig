@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+    <div class="videoCreation">
+        <div class="videoCreationTitle">Création d'une vidéo</div>
+
+        <div>
+            {{ form_start(videoForm) }}
+            {{ form_errors(videoForm) }}
+
+            <div>
+                {{ form_errors(videoForm.author) }}
+                {{ form_widget(videoForm.author, { 'attr': {'class': "inputSignUp",'placeholder': "Auteur"} }) }}
+            </div><br>
+            <br>
+            <div>
+                {{ form_errors(videoForm.name) }}
+                {{ form_widget(videoForm.name, { 'attr': {'class': "inputSignUp",'placeholder': "Nom de la vidéo"} }) }}
+            </div><br>
+            <br>
+            <div>
+                {{ form_label(videoForm.preview)}}
+                {{ form_errors(videoForm.preview) }}
+                {{ form_widget(videoForm.preview)}}
+            </div><br>
+            <br>
+            <div>
+                {{ form_errors(videoForm.link) }}
+                {{ form_widget(videoForm.link, { 'attr': {'class': "inputSignUp",'placeholder': "https://www.youtube.com/embed/..."} }) }}
+            </div><br>
+            <br>
+            <div>
+                {{ form_errors(videoForm.content) }}
+                {{ form_widget(videoForm.content, { 'attr': {'class': "inputSignUp",'placeholder': "Saisir une description ici."} }) }}
+            </div><br>
+            <br>
+            <div>
+                {{ form_widget(videoForm.Envoyer, { 'attr': {'class': "submitSignUp",'value': "Envoyer"} }) }}
+            </div>
+
+            {{ form_end(videoForm) }}
+        </div>
+    </div>
+
+
+{% endblock %}

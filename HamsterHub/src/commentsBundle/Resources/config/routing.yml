@@ -1,0 +1,3 @@
+comments_create:
+    path:     /comments/{slug}
+    defaults: { _controller: commentsBundle:Comments:create }

@@ -1,0 +1,15 @@
+user_login:
+    path:     /login
+    defaults: { _controller: UserBundle:User:login }
+
+user_register:
+    path:     /register
+    defaults: { _controller: UserBundle:User:register }
+
+user_list:
+    path:     /userList
+    defaults: { _controller: UserBundle:User:userList }
+
+user_profile:
+    path:     /userProfile/{slug}
+    defaults: { _controller: UserBundle:User:userProfile }

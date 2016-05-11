@@ -1,3 +1,0 @@
-users_homepage:
-    path:     /
-    defaults: { _controller: usersBundle:users:index }

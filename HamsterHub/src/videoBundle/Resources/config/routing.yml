@@ -1,0 +1,11 @@
+video_homepage:
+    path:     /
+    defaults: { _controller: videoBundle:Default:index }
+
+video_create:
+    path:     /createVideo
+    defaults: { _controller: videoBundle:Video:create }
+
+video_view:
+    path:     /view/{slug}
+    defaults: { _controller: videoBundle:Video:view }

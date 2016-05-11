@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+    <div class="videoContent">
+    {% for video in videoList|reverse %}
+        <div class="videoBlock">
+            <div class="video"><img src="{{ video.preview }}"></div>
+            <div class="videoName"><a href="{{ path('video_view', {'slug': video.id }) }}">{{ video.name }}</a></div>
+            <div class="videoAuthor">{{ video.author }}</div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

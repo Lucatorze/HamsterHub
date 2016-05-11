@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+    <div class="videoContent">
+        <div class="videoWTitle">{{ videoInfo.name }}</div>
+        <div class="videoIframe"><iframe src="https://www.youtube.com/embed/{{ videoInfo.link }}" frameborder="0" allowfullscreen></iframe></div>
+        <div class="videoWAuthor">{{ videoInfo.author }}</div>
+        <div class="videoWDescription">{{ videoInfo.content }}</div>
+        <div class="videoWComments">Comments :
+            {% for comments in viewComments %}
+                <div class="videoWComments1">
+                    {{ comments.content }}<br>
+                    <br>
+                    By <b>{{ comments.author }}</b>
+                </div>
+            {% endfor %}
+            <br>
+            <div align="center"><a href="{{ path('comments_create', {'slug': videoInfo.id }) }}" class="submitSignUp">Commenter !</a></div><br>
+            <br>
+        </div>
+    </div>
+
+
+{% endblock %}
